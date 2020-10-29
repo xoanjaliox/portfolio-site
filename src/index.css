@@ -10,7 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #6b57b5;
   overflow: hidden;
-  background: url('./assets/images/bgpic.jpg');
 }
 
 code {
