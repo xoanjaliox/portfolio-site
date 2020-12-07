@@ -1,4 +1,5 @@
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 export default {
     name: 'Anjali Sharma',
@@ -13,6 +14,12 @@ export default {
             link: 'https://www.linked.com/in/asharma89',
             text: 'LinkedIn',
             icon: <LinkedInIcon />
+        }
+
+        github: {
+            link: 'https://github.com/xoanjaliox',
+            text: 'GitHub',
+            icon: <GitHubIcon />
         }
     }
 
