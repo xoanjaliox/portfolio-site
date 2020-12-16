@@ -1,10 +1,24 @@
 import React from 'react'
 import { Typography } from '@material-ui/core';
 import displaypic from '../../assets/images/displaypic.jpg';
-import CustomTimeline from '../Timeline/Timeline';
-
+import CustomTimeline, { CustomTimelineSeparator } from '../Timeline/Timeline';
+import TimelineItem from "@material-ui/lab/TimelineItem";
+import TimelineContent from "@material-ui/lab/TimelineContent";
 import resumeData from '../../utils/resumeData';
 import './Profile.css';
+
+const CustomTimelineItem = ({title, text, link}) => (
+    <TimelineItem>
+        <CustomTimelineSeparator />
+        <TimelineContent>
+            <span>{title}</span>
+            {link ? (<></>) : (
+                <Typography> </Typography>
+            )}
+        </TimelineContent>
+       
+    </TimelineItem>
+)
 
 const Profile = () => {
     return (
