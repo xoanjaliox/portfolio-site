@@ -1,5 +1,5 @@
 .custom-btn {
-    background-color: var(--main-color) !important;
+    background-color: #4ab8a0 !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     border: 0 !important;
@@ -22,7 +22,10 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+}
 
+.custom-btn .btn-icon-container > .MuiSvgIcon-root {
+    font-size: 16px !important;
 }
 
 .custom-btn .btn-text {

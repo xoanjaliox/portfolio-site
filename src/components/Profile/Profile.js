@@ -3,12 +3,13 @@ import { Typography } from '@material-ui/core';
 import displaypic from '../../assets/images/displaypic.jpg';
 import CustomTimeline, { CustomTimelineSeparator } from '../Timeline/Timeline';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
-import TimelineItem from "@material-ui/lab/TimelineItem";
-import TimelineContent from "@material-ui/lab/TimelineContent";
-
-
 import resumeData from '../../utils/resumeData';
 import './Profile.css';
+import TimelineItem from '@material-ui/lab/TimelineItem';
+import TimelineContent from '@material-ui/lab/TimelineContent';
+import CustomButton from '../Button/Button.js';
+import GetAppIcon from '@material-ui/icons/GetApp';
+
 
 const CustomTimelineItem = ({title, text, link}) => (
     <TimelineItem>
@@ -53,8 +54,8 @@ const Profile = () => {
                           <CustomTimelineItem title ={key} text={resumeData.socials[key].text} link={resumeData.socials[key].link}/>
                       ))}
                     </CustomTimeline> 
-                    <br/>
-                    <button>my Button</button>
+                    <br />
+                    <CustomButton text={'Download resume'} icon={<GetAppIcon />}/>
 
                 </div>
 
