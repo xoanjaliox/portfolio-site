@@ -11,13 +11,13 @@ export default {
     phone: '408.509.3619',
     
     socials: {
-        linkedin: {
+        Linkedin: {
             link: 'https://www.linked.com/in/asharma89',
             text: 'LinkedIn',
             icon: <LinkedInIcon />
         },
 
-        github: {
+        Github: {
             link: 'https://github.com/xoanjaliox',
             text: 'GitHub',
             icon: <GitHubIcon />
