@@ -45,7 +45,17 @@
 }
 
 .timelineItem-text {
-    font-size: 13.5px;
+    font-size: 13.5px !important;
     color: #787878;
-    font-weight: 400;
+    font-weight: 400 !important;
+    text-decoration: none;
+}
+
+.timelineItem-text > a {
+    color: #787878 !important;
+    text-decoration: none;
+}
+
+.timelineItem-text > span {
+    color: #000000;
 }
