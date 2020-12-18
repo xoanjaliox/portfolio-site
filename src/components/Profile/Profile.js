@@ -13,17 +13,17 @@ import './Profile.css';
 const CustomTimelineItem = ({title, text, link}) => (
     <TimelineItem>
         <CustomTimelineSeparator />
-        <TimelineContent>
+        <TimelineContent className='timeline-content'>
             
             {link ? (
-              <Typography>
+              <Typography className='timelineItem-text'>
                 <span>{title}:</span>
                 <a href={link} target='_blank'>
                   {text}
                 </a>
               </Typography>
             ) : (
-              <Typography>
+              <Typography className='timelineItem-text'>
                   <span>{title}:</span>{text}
               </Typography>
             )}
