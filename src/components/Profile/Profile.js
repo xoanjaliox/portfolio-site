@@ -2,8 +2,11 @@ import React from 'react'
 import { Typography } from '@material-ui/core';
 import displaypic from '../../assets/images/displaypic.jpg';
 import CustomTimeline, { CustomTimelineSeparator } from '../Timeline/Timeline';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
+
+
 import resumeData from '../../utils/resumeData';
 import './Profile.css';
 
@@ -11,13 +14,22 @@ const CustomTimelineItem = ({title, text, link}) => (
     <TimelineItem>
         <CustomTimelineSeparator />
         <TimelineContent>
-            <span>{title}</span>
-            {link ? (<></>) : (
-                <Typography> </Typography>
+            
+            {link ? (
+              <Typography>
+                <span>{title}:</span>
+                <a href={link} target='_blank'>
+                  {text}
+                </a>
+              </Typography>
+            ) : (
+              <Typography>
+                  <span>{title}:</span>{text}
+              </Typography>
             )}
         </TimelineContent>
        
-    </TimelineItem>
+    </TimelineItem> 
 )
 
 const Profile = () => {
@@ -32,7 +44,12 @@ const Profile = () => {
                 </figure>
 
                 <div className="profile-info">
-                    <CustomTimeline />
+                    <CustomTimeline icon={<PersonOutlineOutlinedIcon />}>
+                      <CustomTimelineItem title ='Name' text={resumeData.name}/>
+                      <CustomTimelineItem title ='Title' text={resumeData.title}/>
+                      <CustomTimelineItem title ='Email' text={resumeData.email}/>
+                    
+                    </CustomTimeline> 
                     <br/>
                     <button>my Button</button>
 
