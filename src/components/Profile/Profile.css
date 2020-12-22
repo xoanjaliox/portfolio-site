@@ -59,3 +59,11 @@
 .timelineItem-text > span {
     color: #000000;
 }
+
+.profile .button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}

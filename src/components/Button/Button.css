@@ -1,5 +1,5 @@
 .custom-btn {
-    background-color: #4ab8a0 !important;
+    background-color: var(--main-color) !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     border: 0 !important;
