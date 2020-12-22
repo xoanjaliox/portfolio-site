@@ -6,7 +6,7 @@ import './Button.css';
 const CustomButton = ({ text, icon }) => {
     return (
         <Button
-         classname='custom-btn'
+         className='custom-btn'
          endIcon={ icon ? <div className='btn-icon-container'>{icon}</div> : null}>
          <span className='btn-text'>{text}</span>
         </Button>
