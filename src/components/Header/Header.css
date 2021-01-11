@@ -12,10 +12,31 @@
 }
 
 .header .header-link:hover {
-    color: var(--main-color) !important;
+    color: #fba229 !important;
 }
 
 .header .header-link-active {
     font-weight: 500;
-    color: var(--main-color) !important;
+    color: #fba229 !important;
+}
+
+.header .header-home {
+    background-color: var(--main-color);
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.header .header-right {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header .header-right > a > .MuiSvgIcon-root {
+    font-size: 16px !important;
+    margin-right: 12px;
+    color: #000000;
 }
