@@ -17,6 +17,7 @@ import {
     Telegram,
 } from "@material-ui/icons";
 import { Link, NavLink, withRouter } from "react-router-dom";
+import resumeData from "../../utils/resumeData";
 
 const Header = (props) => {
     const pathName = props?.location?.pathname
@@ -52,6 +53,12 @@ const Header = (props) => {
                       Portfolio
                       </Nav.Link>
                   </Nav>
+
+                  <div className="header-right">
+                      {Object.keys(resumeData.socials).map(key => (
+                          <a href={resumeData.socials[key].link} target="_blank">{resumeData.socials[key].icon}</a>
+                      ))}
+                  </div>
               </Navbar.Collapse>
         </Navbar> 
     )
