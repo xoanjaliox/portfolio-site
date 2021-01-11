@@ -18,6 +18,7 @@ import {
 } from "@material-ui/icons";
 import { Link, NavLink, withRouter } from "react-router-dom";
 import resumeData from "../../utils/resumeData";
+import CustomButton from "../Button/Button";
 
 const Header = (props) => {
     const pathName = props?.location?.pathname
@@ -56,12 +57,15 @@ const Header = (props) => {
 
                   <div className="header-right">
                       {Object.keys(resumeData.socials).map(key => (
-                          <a href={resumeData.socials[key].link} target="_blank">{resumeData.socials[key].icon}</a>
+                          <a href={resumeData.socials[key].link} target="_blank">
+                            {resumeData.socials[key].icon}
+                          </a>
                       ))}
+                      <CustomButton text={"Hire me!"} icon={<Telegram />} />
                   </div>
               </Navbar.Collapse>
         </Navbar> 
     )
 }
 
-export default Header;
+export default withRouter(Header);
