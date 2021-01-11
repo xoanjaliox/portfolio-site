@@ -28,7 +28,7 @@ const Header = (props) => {
     return (
         <Navbar expands="lg" sticky="top" className="header">
             {/* Home Link */}
-            <Nav.Link as={NavLink} to="/">
+            <Nav.Link as={NavLink} to="/" className="header-navlink">
                 <Navbar.Brand className="header-home">
                     <HomeRounded />
                 </Navbar.Brand>
@@ -38,7 +38,7 @@ const Header = (props) => {
               
               
               <Navbar.Collapse>
-                  <Nav>
+                  <Nav className="header-left">
                   {/* Resume Link */}
                       <Nav.Link
                       as={NavLink}
