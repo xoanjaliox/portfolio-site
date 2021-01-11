@@ -23,9 +23,9 @@ function App() {
           lg={3}>
           <Profile />
         </Grid>
-        <Grid item xs style={{backgroundColor: 'red'}}>
-          <Header />
+        <Grid item xs>
           <Router>
+           <Header />
             <Switch>
               <Route path="/portfolio">
                 <Portfolio />
