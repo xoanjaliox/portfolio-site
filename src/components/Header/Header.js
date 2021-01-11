@@ -19,6 +19,7 @@ import {
 import { Link, NavLink, withRouter } from "react-router-dom";
 import resumeData from "../../utils/resumeData";
 import CustomButton from "../Button/Button";
+import "./Header.css";
 
 const Header = (props) => {
     const pathName = props?.location?.pathname
