@@ -19,7 +19,25 @@ const Resume = () => {
         </Grid>
 
         {/* Education & Experience */}
-        <Grid container className="section"></Grid>
+        <Grid container className="section">
+            <Grid item className="section-title mb_30">
+                <span></span>
+                <h6 className="sectiontitle-text">Resume</h6>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Grid container>
+                {/* Work History */}
+                <Grid item sm={12} md={6}></Grid>
+                {/* Education */}
+                <Grid item sm={12} md={6}></Grid>
+              </Grid>
+            </Grid>
+
+
+
+
+        </Grid>
 
         {/* Services */}
         <Grid container className="section"></Grid>
