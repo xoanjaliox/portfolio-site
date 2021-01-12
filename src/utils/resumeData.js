@@ -1,6 +1,9 @@
 import React from "react";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
+import AccountTreeOutlinedIcon from '@material-ui/icons/AccountTreeOutlined';
+import WebOutlinedIcon from '@material-ui/icons/WebOutlined';
+import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
 
 export default {
     name: ' Anjali Sharma',
@@ -64,5 +67,70 @@ export default {
             date: "Aug 2016 - Sept. 2018",
             description: "This is where a description of work duties & responsibilities will go. Should be about 3 lines of text."
         },
-    ]
+    ],
+
+    services: [
+        {
+            title: "Web Development",
+            description: "Ability to build wbesites with front & back end development.",
+            icon: <WebOutlinedIcon />,
+        },
+
+        {
+            title: "Visual Design",
+            description: "Can create wireframes & mockups quickly .",
+            icon: <TableChartOutlinedIcon />,
+        },
+
+        {
+            title: "UX Design",
+            description: "Create apps/websites using research to supporet design & functionality.",
+            icon: <AccountTreeOutlinedIcon />,
+        },
+    ],
+
+    skills: [
+        {
+            title: "Front End",
+            description: [
+                "ReactJS",
+                "Javacript",
+                "Boostrap",
+                "Material UI",
+            ],
+            
+        },
+
+        {
+            title: "Back End",
+            description: [
+                "NodeJS",
+                "Javacript",
+                "Boostrap",
+                "Material UI",
+            ],
+        },
+
+        {
+            title: "Databases",
+            description: [
+                "Firebase",
+                "MySQL",
+                "MongoDB",
+                "Material UI",
+            ],
+        },
+
+        {
+            title: "Source Control",
+            description: [
+                "Git",
+                "Github",
+            ],
+        },
+    ],
+
+
+    
 }
+

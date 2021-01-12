@@ -1,5 +1,6 @@
 import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, } from "@material-ui/core";
+import Icon from '@material-ui/core/Icon';
 import CustomTimeline, {
   CustomTimelineSeparator,
 } from "../../components/Timeline/Timeline";
@@ -7,6 +8,7 @@ import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from '@material-ui/icons/School';
+
 
 import resumeData from "../../utils/resumeData";
 import "./Resume.css";
@@ -29,7 +31,7 @@ const Resume = () => {
       </Grid>
 
       {/* Education & Experience */}
-      <Grid container className="section">
+      <Grid container className="section pb_45">
         <Grid item className="section-title mb_30">
           <span></span>
           <h6 className="sectiontitle-text">Resume</h6>
@@ -61,6 +63,8 @@ const Resume = () => {
                 ))}
               </CustomTimeline>
             </Grid>
+
+
             {/* Education */}
             <Grid item sm={12} md={6}>
               <CustomTimeline title="Education" icon={<SchoolIcon />}>
@@ -90,7 +94,26 @@ const Resume = () => {
       </Grid>
 
       {/* Services */}
-      <Grid container className="section"></Grid>
+      <Grid container className="section pb_45">
+      <Grid item className="section-title mb_30">
+          <span></span>
+          <h6 className="sectiontitle-text">My Services</h6>
+        </Grid>
+
+        <Grid item xs={12}>
+          <Grid container>
+              {resumeData.services.map((service) => (
+                  <Grid item xs={12} sm={6} m={3}>
+                    <div className="service">
+                      <Icon className="service-icon">{service.icon}</Icon>
+                      <Typography className="service-title" variant="h6">{service.title}</Typography>
+                      <Typography className="service-description" variant="body2">{service.description}</Typography>
+                    </div>
+                  </Grid>
+              ))}
+          </Grid>
+        </Grid>
+      </Grid>
 
       {/* Skills */}
       <Grid container className="section"></Grid>
