@@ -6,3 +6,26 @@
     line-height: 22px !important;
     white-space: pre-line !important;
 }
+
+/* End of About Me Section */
+
+/* Work Experience Timeline Section */
+
+.resume-timeline .timeline-content .timeline-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.resume-timeline .timeline-content .timeline-date {
+    color: #333333;
+}
+
+.resume-timeline .timeline-content .timeline-description {
+    color: #a9a9a9;
+    font-size: small;
+    margin-top: 6px;
+}
+
+
+
+/* End of Work Experience Timeline Section */

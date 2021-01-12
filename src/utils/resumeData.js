@@ -46,7 +46,7 @@ export default {
         },
     ],
 
-    education: [
+    educations: [
         {
             title: "Education 1",
             date: "2018 - Present",
