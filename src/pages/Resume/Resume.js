@@ -1,5 +1,7 @@
  import React from 'react';
  import { Grid, Typography } from "@material-ui/core";
+ import CustomTimeline, { CustomTimelineSeparator } from '../../components/Timeline/Timeline';
+ import WorkIcon from '@material-ui/icons/Work';
 
  import resumeData from "../../utils/resumeData";
  import "./Resume.css";
@@ -28,7 +30,11 @@ const Resume = () => {
             <Grid item xs={12}>
               <Grid container>
                 {/* Work History */}
-                <Grid item sm={12} md={6}></Grid>
+                <Grid item sm={12} md={6}>
+                  <CustomTimeline
+                  title="Work History"
+                  icon={<WorkIcon />}></CustomTimeline>
+                </Grid>
                 {/* Education */}
                 <Grid item sm={12} md={6}></Grid>
               </Grid>

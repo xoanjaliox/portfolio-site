@@ -17,7 +17,9 @@ const CustomTimeline = ({ title, icon, children }) => {
         {/* Item header */}
           <TimelineItem className={'timeline-firstItem'}>
             <TimelineSeparator>
-              <TimelineDot className={'timeline-dot-header'}>{<PersonPinCircleIcon />}</TimelineDot>
+              <TimelineDot className={'timeline-dot-header'}>
+                {icon}
+              </TimelineDot>
               <TimelineConnector />
             </TimelineSeparator>
             <TimelineContent>
