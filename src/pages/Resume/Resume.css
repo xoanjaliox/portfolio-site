@@ -73,6 +73,7 @@
     font-size: 14px !important;
     font-weight: 500 !important;
     line-height: 35px !important;
+    text-transform: uppercase !important;
 
 }
 
@@ -92,3 +93,8 @@
 }
 
 /* End of Skills Section */
+
+/* Contact Section */
+
+
+/* End of Contact Section */

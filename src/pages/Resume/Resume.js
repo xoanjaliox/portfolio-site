@@ -6,9 +6,11 @@ import CustomTimeline, {
 } from "../../components/Timeline/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
+import CustomButton from "../../components/Button/Button";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
 import Paper from "@material-ui/core/Paper";
+import TextField from "@material-ui/core/TextField";
 
 import resumeData from "../../utils/resumeData";
 import "./Resume.css";
@@ -145,7 +147,37 @@ const Resume = () => {
       </Grid>
 
       {/* Contact */}
-      <Grid container className="section"></Grid>
+      <Grid container className="section pt_45 pb_45">
+        {/* Left Contact Form */}
+        <Grid item xs={12} lg={7}>
+          <Grid container>
+            <Grid item className="section-title mb_30">
+              <span></span>
+              <h6 className="sectiontitle-text">Contact Form</h6>
+            </Grid>
+
+            <Grid item xs={12}>
+              <Grid container spacing={3}>
+                <Grid item xs={12} sm={6}>
+                  <TextField fullWidth name="name" label="Name" />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                  <TextField fullWidth name="email" label="E-mail" />
+                </Grid>
+                <Grid item xs={12}>
+                  <TextField fullWidth name="message" label="Message" multiline rows={4} />
+                </Grid>
+                <Grid item xs={12}>
+                  <CustomButton text="Submit" />
+                </Grid>
+              </Grid>
+            </Grid>
+
+            {/* Right Contact Info */}
+            <Grid item xs={12} lg={5}></Grid>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   );
 };
