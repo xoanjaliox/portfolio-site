@@ -153,7 +153,7 @@ const Resume = () => {
           <Grid container>
             <Grid item className="section-title mb_30">
               <span></span>
-              <h6 className="sectiontitle-text">Contact Form</h6>
+              <h6 className="sectiontitle-text">Contact Me</h6>
             </Grid>
 
             <Grid item xs={12}>
