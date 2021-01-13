@@ -66,18 +66,29 @@
     min-height: 186px;
     height: 100%;
 
+
 }
 
 .skill .skill-title {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 35px !important;
 
 }
 
 .skill .skill-description {
-
+    display: flex;
+    align-items: center;
+    color: #989898 !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
 }
 
 .skill .skill-description .timeline-dot {
-
+    color: #000000 !important;
+    border-color: #fba229 !important;
+    padding: 2px !important;
+    margin-right: 5px !important;
 }
 
 /* End of Skills Section */

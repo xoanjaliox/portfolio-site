@@ -1,15 +1,14 @@
 import React from "react";
-import { Grid, Typography, } from "@material-ui/core";
-import Icon from '@material-ui/core/Icon';
+import { Grid, Typography } from "@material-ui/core";
+import Icon from "@material-ui/core/Icon";
 import CustomTimeline, {
   CustomTimelineSeparator,
 } from "../../components/Timeline/Timeline";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import WorkIcon from "@material-ui/icons/Work";
-import SchoolIcon from '@material-ui/icons/School';
-import Paper from '@material-ui/core/Paper';
-
+import SchoolIcon from "@material-ui/icons/School";
+import Paper from "@material-ui/core/Paper";
 
 import resumeData from "../../utils/resumeData";
 import "./Resume.css";
@@ -19,7 +18,7 @@ const Resume = () => {
   return (
     <>
       {/* About Me */}
-      <Grid container className="section pb_45">
+      <Grid container className="section pb_45 pt_45">
         <Grid item className="section-title mb_30">
           <span></span>
           <h6 className="sectiontitle-text">About Me</h6>
@@ -65,7 +64,6 @@ const Resume = () => {
               </CustomTimeline>
             </Grid>
 
-
             {/* Education */}
             <Grid item sm={12} md={6}>
               <CustomTimeline title="Education" icon={<SchoolIcon />}>
@@ -101,42 +99,49 @@ const Resume = () => {
           <h6 className="sectiontitle-text">My Services</h6>
         </Grid>
 
-        <Grid item xs={12} >
+        <Grid item xs={12}>
           <Grid container spacing={3} justify="space-around">
-              {resumeData.services.map((service) => (
-                  <Grid item xs={12} sm={4} m={3}>
-                    <div className="service">
-                      <Icon className="service-icon">{service.icon}</Icon>
-                      <Typography className="service-title" variant="h6">{service.title}</Typography>
-                      <Typography className="service-description" variant="body2">{service.description}</Typography>
-                    </div>
-                  </Grid>
-              ))}
+            {resumeData.services.map((service) => (
+              <Grid item xs={12} sm={4} m={3}>
+                <div className="service">
+                  <Icon className="service-icon">{service.icon}</Icon>
+                  <Typography className="service-title" variant="h6">
+                    {service.title}
+                  </Typography>
+                  <Typography className="service-description" variant="body2">
+                    {service.description}
+                  </Typography>
+                </div>
+              </Grid>
+            ))}
           </Grid>
         </Grid>
       </Grid>
 
       {/* Skills */}
-      <Grid
-        container 
-        spacing={3}
-        justify="space-between"
-        className="section graybg pb_45">
-        {resumeData.skills.map((skill) => (
-          <Grid item xs={3} s={4} m={3}>
-            <Paper elevation="0" className="skill">
-              <Typography variant="h6" className="skill-title">
-                {skill.title}
-              </Typography>
-              {skill.description.map((element) => (
-                <Typography variant="body2" className="skill-description">
-                  <TimelineDot vasiran="outlined" className="timeline-dot" />
-                  {element}
-                </Typography>
-              ))}
-            </Paper>
+      <Grid container className="section graybg pb_45 p_40">
+        <Grid item xs={12}>
+          <Grid container justify="space-between" spacing={3}>
+            {resumeData.skills.map((skill) => (
+              <Grid item xs={3} s={4} m={3}>
+                <Paper elevation="0" className="skill">
+                  <Typography variant="h6" className="skill-title">
+                    {skill.title}
+                  </Typography>
+                  {skill.description.map((element) => (
+                    <Typography variant="body2" className="skill-description">
+                      <TimelineDot
+                        variant="outlined"
+                        className="timeline-dot"
+                      />
+                      {element}
+                    </Typography>
+                  ))}
+                </Paper>
+              </Grid>
+            ))}
           </Grid>
-        ))}
+        </Grid>
       </Grid>
 
       {/* Contact */}
