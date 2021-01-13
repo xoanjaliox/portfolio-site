@@ -72,7 +72,7 @@ export default {
     services: [
         {
             title: "Web Development",
-            description: "Ability to build wbesites with front & back end development.",
+            description: "Build websites with front & back end development.",
             icon: <WebOutlinedIcon />,
         },
 

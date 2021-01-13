@@ -41,4 +41,19 @@
     text-align: center;
 }
 
+.service .service-description {
+    color: #989898 !important;
+    border-color: var(--main-color) !important;
+    margin-right: 5px !important;
+    text-align: center;
+}
+
+.service-icon > .MuiSvgIcon-root {
+    font-size: 46px !important;
+    margin-left: 0 !important;
+    font-weight: 300 !important;
+    color: #333333;
+}
+
+
 /* End of Services Section */

@@ -95,15 +95,15 @@ const Resume = () => {
 
       {/* Services */}
       <Grid container className="section pb_45">
-      <Grid item className="section-title mb_30">
+        <Grid item className="section-title mb_30">
           <span></span>
           <h6 className="sectiontitle-text">My Services</h6>
         </Grid>
 
-        <Grid item xs={12}>
-          <Grid container>
+        <Grid item xs={12} >
+          <Grid container spacing={3} justify="space-around">
               {resumeData.services.map((service) => (
-                  <Grid item xs={12} sm={6} m={3}>
+                  <Grid item xs={12} sm={4} m={3}>
                     <div className="service">
                       <Icon className="service-icon">{service.icon}</Icon>
                       <Typography className="service-title" variant="h6">{service.title}</Typography>
