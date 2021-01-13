@@ -27,3 +27,18 @@
 }
 
 /* End of Work Experience Timeline Section */
+
+/* Services Section */
+.service {
+    height: 100%;
+    text-align: center;
+}
+
+.service .service-title {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 35px !important;
+    text-align: center;
+}
+
+/* End of Services Section */
