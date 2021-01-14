@@ -149,7 +149,7 @@ const Resume = () => {
       {/* Contact */}
       <Grid container className="section pt_45 pb_45">
         {/* Left Contact Form */}
-        <Grid item xs={12} lg={7}>
+        <Grid item xs={12} lg={12}>
           <Grid container>
             <Grid item className="section-title mb_30">
               <span></span>
@@ -165,7 +165,13 @@ const Resume = () => {
                   <TextField fullWidth name="email" label="E-mail" />
                 </Grid>
                 <Grid item xs={12}>
-                  <TextField fullWidth name="message" label="Message" multiline rows={4} />
+                  <TextField
+                    fullWidth
+                    name="message"
+                    label="Message"
+                    multiline
+                    rows={4}
+                  />
                 </Grid>
                 <Grid item xs={12}>
                   <CustomButton text="Submit" />
@@ -174,7 +180,28 @@ const Resume = () => {
             </Grid>
 
             {/* Right Contact Info */}
-            <Grid item xs={12} lg={5}></Grid>
+            <Grid item xs={12} lg={12}>
+              <Grid container>
+                <Grid item className="section-title mb_30">
+                  <span></span>
+                  <h6 className="sectiontitle-text">Contact Info</h6>
+                </Grid>
+
+                <Grid item xs={12}>
+                  <Grid container>
+                    <Grid item>
+                      <Typography className="contact-info-item">
+                        <span>City: </span> {resumeData.city}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+
+
+
+
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

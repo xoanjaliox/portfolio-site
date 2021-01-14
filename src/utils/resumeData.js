@@ -9,7 +9,7 @@ export default {
     name: ' Anjali Sharma',
     title: ' Designer & Developer',
 
-    location: 'Pleasant Hill, CA',
+    city: 'Pleasant Hill, CA',
     email: ' anjali@anjali.com',
     phone: '408.509.3619',
     
