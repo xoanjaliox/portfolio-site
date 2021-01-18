@@ -155,52 +155,78 @@ const Resume = () => {
               <span></span>
               <h6 className="sectiontitle-text">Contact Me</h6>
             </Grid>
+          </Grid>
+
+          <Grid item xs={12}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <TextField fullWidth name="name" label="Name" />
+              </Grid>
+
+              <Grid item xs={12} sm={6}>
+                <TextField fullWidth name="email" label="E-mail" />
+              </Grid>
+
+              <Grid item xs={12}>
+                <TextField
+                  fullWidth
+                  name="message"
+                  label="Message"
+                  multiline
+                  rows={4}
+                />
+              </Grid>
+
+              <Grid item xs={12}>
+                <CustomButton text="Submit" />
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        {/* Right Contact Info */}
+        <Grid item xs={12} lg={5}>
+          <Grid container>
+            <Grid item className="section-title mb_30">
+              <span></span>
+              <h6 className="sectiontitle-text">Contact Info</h6>
+            </Grid>
 
             <Grid item xs={12}>
-              <Grid container spacing={3}> 
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="name" label="Name" />
-                </Grid>
-
-                <Grid item xs={12} sm={6}>
-                  <TextField fullWidth name="email" label="E-mail" />
-                </Grid>
-
+              <Grid container spacing={2}>
                 <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    name="message"
-                    label="Message"
-                    multiline
-                    rows={4}
-                  />
+                  <Typography className="contact-info-item">
+                    <span>City: </span> {resumeData.city}
+                  </Typography>
                 </Grid>
-
                 <Grid item xs={12}>
-                  <CustomButton text="Submit" />
+                  <Typography className="contact-info-item">
+                    <span>Phone: </span> {resumeData.phone}
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography className="contact-info-item">
+                    <span>Email: </span> {resumeData.email}
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
-
-            {/* Right Contact Info */}
-            <Grid item xs={12} lg={5}>
-              <Grid container>
-                <Grid item className="section-title mb_30">
-                  <span></span>
-                  <h6 className="sectiontitle-text">Contact Info</h6>
-                </Grid>
-
-                <Grid item xs={12}>
-                  <Grid container>
-                    <Grid item>
-                      <Typography className="contact-info-item">
-                        <span>City: </span> {resumeData.city}
-                      </Typography>
-                    </Grid>
+          
+            <Grid item xs={12}>
+              <Grid container className="contact-info-socials-container">
+                {Object.keys(resumeData.socials).map((key) => (
+                  <Grid item className="contact-info-social">
+                    <a href={resumeData.socials[key].link}>
+                      {resumeData.socials[key].icon}
+                    </a>
                   </Grid>
-                </Grid>
+                ))}
               </Grid>
             </Grid>
+          
+          
+          
+          
           </Grid>
         </Grid>
       </Grid>
