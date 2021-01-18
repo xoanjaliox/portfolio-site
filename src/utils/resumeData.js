@@ -4,6 +4,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import AccountTreeOutlinedIcon from '@material-ui/icons/AccountTreeOutlined';
 import WebOutlinedIcon from '@material-ui/icons/WebOutlined';
 import TableChartOutlinedIcon from '@material-ui/icons/TableChartOutlined';
+import { GitHub } from "@material-ui/icons";
 
 export default {
     name: ' Anjali Sharma',
@@ -129,6 +130,52 @@ export default {
             ],
         },
     ],
+
+    portfolio: [
+        {
+            tag: "Design",
+            image: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+            title: "Design Project 1",
+            description: "This is where the project description will go. Please fill this in.",
+            links: [
+                {
+                    link: "https://www.google.com", icon: <GitHub />}
+            ]
+        },
+
+        {
+            tag: "Developer",
+            image: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+            title: "Developer Project 1",
+            description: "This is where the project description will go. Please fill this in.",
+            links: [
+                {
+                    link: "https://www.google.com", icon: <GitHub />}
+            ]
+        },
+
+        {
+            tag: "Developer",
+            image: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+            title: " Developer Project 2",
+            description: "This is where the project description will go. Please fill this in.",
+            links: [
+                {
+                    link: "https://www.google.com", icon: <GitHub />}
+            ]
+        },
+
+        {
+            tag: "Design",
+            image: "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg",
+            title: "Design Project 2",
+            description: "This is where the project description will go. Please fill this in.",
+            links: [
+                {
+                    link: "https://www.google.com", icon: <GitHub />}
+            ]
+        },
+    ]
 
 
     

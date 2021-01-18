@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Tabs } from "@material-ui/core";
+import { Tab, Tabs, Grid } from "@material-ui/core";
 import "./Portfolio.css";
+import resumeData from "../../utils/resumeData";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
@@ -14,13 +15,14 @@ const Portfolio = () => {
       </Grid>
 
       {/* Tabs */}
-      <Grid item>
+      <Grid item xs={12}>
         <Tabs
           value={tabValue}
           indicatorColor="white"
           className="custom-tabs"
-          onChange={(event, newValue) => setTabValue(newValue)}
-        ></Tabs>
+          onChange={(event, newValue) => setTabValue(newValue)}>
+              <Tab label="All" value="All" className={tabValue == "All" ? "custom-tabs-item-active" : "custom-tabs-item"} />
+          </Tabs>
       </Grid>
     </Grid>
   );
