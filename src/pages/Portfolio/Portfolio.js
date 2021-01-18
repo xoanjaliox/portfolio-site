@@ -8,6 +8,9 @@ import {
   CardContent,
   CardMedia,
   Typography,
+  Dialog,
+  DialogTitle,
+  DialogContent,
 } from "@material-ui/core";
 import Grow from "@material-ui/core/Grow";
 import "./Portfolio.css";
@@ -15,6 +18,14 @@ import resumeData from "../../utils/resumeData";
 
 const Portfolio = () => {
   const [tabValue, setTabValue] = useState("All");
+
+  const ProjectDialog = () => {
+      <Dialog>
+          <DialogTitle></DialogTitle>
+          <img src="" alt="" />
+          <DialogContent></DialogContent>
+      </Dialog>
+  }
 
   return (
     <Grid container className="section pb_45 pt_45">
@@ -62,19 +73,23 @@ const Portfolio = () => {
       <Grid item xs={12}>
         <Grid container spacing={2}>
           {resumeData.projects.map((project) => (
-            <Grid item>
-              <Grow in timeout={1000}>
-                <Card>
-                  <CardActionArea>
-                    <CardMedia />
-                    <CardContent>
-                      <Typography>{project.title}</Typography>
-                      <Typography>{project.description}</Typography>
-                    </CardContent>
-                  </CardActionArea>
-                </Card>
-              </Grow>
-            </Grid>
+            <>
+              {tabValue === project.tag || tabValue === "All" ? (
+                <Grid item>
+                  <Grow in timeout={1000}>
+                    <Card className="custom-card" onClick={() => console.log("sdsf")}>
+                      <CardActionArea>
+                        <CardMedia className="custom-card-image" image={project.image} title={project.title}/>
+                        <CardContent>
+                          <Typography className="custom-card-title">{project.title}</Typography>
+                          <Typography variant="body2" className="custom-card-description">{project.description}</Typography>
+                        </CardContent>
+                      </CardActionArea>
+                    </Card>
+                  </Grow>
+                </Grid>
+              ) : null}
+            </>
           ))}
         </Grid>
       </Grid>
