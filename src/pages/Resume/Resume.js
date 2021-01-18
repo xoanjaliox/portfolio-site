@@ -147,7 +147,7 @@ const Resume = () => {
       </Grid>
 
       {/* Contact */}
-      <Grid container className="section pt_45 pb_45">
+      <Grid container spacing={6} className="section pt_45 pb_45">
         {/* Left Contact Form */}
         <Grid item xs={12} lg={7}>
           <Grid container>
@@ -193,7 +193,7 @@ const Resume = () => {
             </Grid>
 
             <Grid item xs={12}>
-              <Grid container spacing={2}>
+              <Grid container>
                 <Grid item xs={12}>
                   <Typography className="contact-info-item">
                     <span>City: </span> {resumeData.city}

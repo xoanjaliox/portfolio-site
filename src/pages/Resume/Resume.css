@@ -96,19 +96,26 @@
 
 /* Contact Section */
 .contact-info-item {
+    font-size: 14px !important;
+    color: #787878;
+    line-height: 34px !important;
 
 }
 
 .contact-info-item > span {
-
+    color: #000000;
+    font-weight: 500;
 }
 
 .contact-info-socials-container {
+    margin-top: 20px;
 
 }
 
 .contact-info-social > a > .MuiSvgIcon-root {
-    
+    font-size: 16px !important;
+    margin-right: 10px;
+    color: #000000;
 }
 
 /* End of Contact Section */
